@@ -196,8 +196,7 @@
 }
 
 .banner-container {
-  width: 100%;
-  padding: 0px 0 0 0;
+  width: 98%;
   margin-top: 20px;
 }
 
@@ -208,6 +207,7 @@
 
 .banner-image {
   border-radius: 25px;
+  width: 100%;
 }
 
 .no-data-text {
@@ -362,8 +362,7 @@
   }
 
   .banner-container {
-    width: 100%;
-    padding: 0px 0 0 0;
+    width: 90%;
     margin-top: 10px;
   }
 
