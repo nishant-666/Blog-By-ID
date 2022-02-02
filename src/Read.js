@@ -22,7 +22,24 @@ export default function Read() {
             {Object.keys(singleNote).length > 0 ? (
                 <div class="blog-posts">
                     <div class="blog-content">
-                        <div className="blog-main">
+                        <div className="blog-main-desktop">
+                            <div>
+                                <p class="blog-timestamp">{singleNote.timestamp} / <span className="tags-container">{singleNote.tag}</span></p>
+                                <p class="blog-title">{singleNote.title}</p>
+                                <div className="author-container">
+                                    <img className="avatar-img" src={singleNote.avatar ? singleNote.avatar : UserImage} avatar />
+                                    <p class="author-name">{singleNote.author}</p>
+                                </div>
+                                <div className="banner-container">
+                                    <img src={singleNote.banner} className="banner-image" />
+                                </div>
+                                <p class="blog-post">
+                                    <div dangerouslySetInnerHTML={{ __html: `${singleNote.blogPost}` }}></div>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="blog-main-mobile">
                             <div>
                                 <p class="blog-timestamp">{singleNote.timestamp} / <span className="tags-container">{singleNote.tag}</span></p>
                                 <p class="blog-title">{singleNote.title}</p>

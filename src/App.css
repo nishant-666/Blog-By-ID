@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Poppins:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Inter&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 .create-form-container {
   padding: 20px;
   height: auto;
@@ -63,12 +63,10 @@
 
 .blog-posts {
   display: flex;
+  justify-content: center;
   width: 100%;
   margin-top: 60px;
-  border-radius: 1rem;
-  border-top: 3px solid #ff9800;
   background-color: #fff;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .blog-content {
   margin-left: 1.5rem;
@@ -97,9 +95,9 @@
 
 .blog-post {
   color: #414449;
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-top: 20px;
+  font-size: 28px;
+  line-height: 1.7;
+  font-family: "Lato", sans-serif;
 }
 
 .sidebar-main {
@@ -200,14 +198,20 @@
   margin-top: 20px;
 }
 
-.blog-main {
-  display: flex;
+.blog-main-desktop {
+  position: absolute;
+  left: 25%;
+  right: 10%;
   /* justify-content: space-between; */
+}
+
+.blog-main-mobile {
+  display: none;
 }
 
 .banner-image {
   border-radius: 25px;
-  width: 100%;
+  width: 80%;
 }
 
 .no-data-text {
@@ -328,20 +332,27 @@
 @media only screen and (max-width: 600px) {
   .blog-posts {
     display: flex;
+
     width: 100%;
-    border-radius: 1rem;
-    border-top: 3px solid #ff9800;
+    margin-top: 10px;
     background-color: #fff;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .blog-main-desktop {
+    display: none;
+  }
+
+  .blog-main-mobile {
+    display: flex;
+    justify-content: center;
+    width: 90%;
   }
 
   .blog-post {
-    color: #718096;
-    font-size: 1rem;
-    line-height: 1.5;
+    color: #414449;
+    font-size: 18px;
     margin-top: 20px;
+    font-family: "Lato", sans-serif;
   }
 
   .blogs-btn {
@@ -486,6 +497,10 @@
     color: #616161;
     font-family: "Poppins", sans-serif !important;
   }
+
+  .banner-image{
+    display: none;
+  }
 }
 
 .react-quill {
@@ -502,7 +517,7 @@
   margin-bottom: 20px;
 }
 
-.loader-container{
+.loader-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -510,7 +525,7 @@
   flex-direction: column;
 }
 
-.loading-text{
+.loading-text {
   font-family: "Poppins", sans-serif !important;
   font-size: 20px;
 }
